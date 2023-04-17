@@ -8,11 +8,17 @@
 import Foundation
 
 
-struct Tweets{
+struct IconAssets{
     enum TweetEnums: String{
         case commnets = "bubble.left"
         case retweet = "arrow.2.squarepath"
         case fav = "heart"
         case bookmark = "bookmark"
+    }
+    enum MainTabEnums: String {
+        case house = "house"
+        case search = "magnifyingglass"
+        case notification = "bell"
+        case messages = "envelope"
     }
 }

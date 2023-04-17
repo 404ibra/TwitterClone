@@ -30,41 +30,43 @@ struct TweetsRowView: View {
                             .font(.caption)
                     }//: HStack
                     
-                    Text("Mobil geliştirmede çok fazla iler")
+                    Text("Mobil geliştirmede çok fazla ilerlemek istiyorum ve güzel girişmlerde bulunacağıma inanıyorum")
                         .font(.subheadline)
                         .multilineTextAlignment(.leading)
                     
                 }//: VStack
                 
             }//: HStack
-            .padding(.horizontal)
+          
             HStack{
                 Button {
                 } label: {
-                    Image(systemName: Tweets.TweetEnums.commnets.rawValue)
+                    Image(systemName: IconAssets.TweetEnums.commnets.rawValue)
                         .font(.subheadline)
                 }
                 Spacer()
                 Button {
                 } label: {
-                    Image(systemName: Tweets.TweetEnums.retweet.rawValue)
+                    Image(systemName: IconAssets.TweetEnums.retweet.rawValue)
                         .font(.subheadline)
                 }
                 Spacer()
                 Button {
                 } label: {
-                    Image(systemName: Tweets.TweetEnums.fav.rawValue)
+                    Image(systemName: IconAssets.TweetEnums.fav.rawValue)
                         .font(.subheadline)
                 }
                 Spacer()
                 Button {
                 } label: {
-                    Image(systemName: Tweets.TweetEnums.bookmark.rawValue)
+                    Image(systemName: IconAssets.TweetEnums.bookmark.rawValue)
                         .font(.subheadline)
                 }
-                .padding(.horizontal)
+              
             }
             .padding()
+            .foregroundColor(.gray)
+            Divider()
             //: HStack
         }//: Big VSTACK
     }

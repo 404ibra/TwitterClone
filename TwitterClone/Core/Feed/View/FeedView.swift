@@ -14,6 +14,7 @@ struct FeedView: View {
                 ForEach(0...20, id:\.self){_ in
 
                     TweetsRowView()
+                        .padding()
                 }
             }//: LazyVGrid
         }//: ScrollView
