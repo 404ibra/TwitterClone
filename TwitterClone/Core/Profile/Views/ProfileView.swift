@@ -16,7 +16,14 @@ struct ProfileView: View {
             actionButtons
             userInfoDetails
             tweetFilterBar
-        
+            ScrollView{
+                LazyVStack{
+                    ForEach(0...9, id:\.self){_ in
+                        TweetsRowView()
+                            .padding()
+                    }
+                }
+            }
             Spacer()
         }//: Big VStack
     }
