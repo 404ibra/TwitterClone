@@ -21,4 +21,11 @@ struct IconAssets{
         case notification = "bell"
         case messages = "envelope"
     }
+    
+    enum ProfileViewsEnums: String {
+        case notification = "bell.badge"
+        case verificationAccount = "checkmark.seal.fill"
+        case location = "mappin.and.ellipse"
+        case link = "link"
+    }
 }
