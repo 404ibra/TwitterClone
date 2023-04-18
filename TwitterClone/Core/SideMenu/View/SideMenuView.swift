@@ -4,7 +4,6 @@
 //
 //  Created by İbrahim Aktaş on 18.04.2023.
 //
-
 import SwiftUI
 
 struct SideMenuView: View {
