@@ -13,24 +13,11 @@ struct LoginView: View {
     var body: some View {
         VStack{
             
-            VStack(alignment: .leading){
-                HStack{Spacer()}
-                Text("Hello")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                Text("Welcome Back")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-            }
-            .padding(.leading)
-            .frame(height: 260)
-            .background(.blue)
-            .foregroundColor(.white)
-            .clipShape(RoundedShape(corners: [.bottomRight]))
+        AuthenticationHeader(title1: "Hello", title2: "Welcome back...")
  
             VStack(spacing: 40){
-                TextField("Email", text: $email)
-                TextField("Password", text: $password)
+                CustomInputFields(imageName: "envelope", placeHolder: "Email", text: $email)
+                CustomInputFields(imageName: "lock", placeHolder: "Password", text: $password)
             }.padding(.horizontal, 32)
                 .padding(.top,44)
             
