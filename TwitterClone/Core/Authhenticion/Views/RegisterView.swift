@@ -12,7 +12,7 @@ struct RegisterView: View {
     @State private var username = ""
     @State private var fullname = ""
     @State private var password = ""
-    @Environment(\.presentationMode) var presentetionMode
+    @Environment(\.presentationMode) var mode
     var body: some View {
         VStack{
             
@@ -40,8 +40,8 @@ struct RegisterView: View {
             .shadow(color: .gray.opacity(0.5),radius: 10, x:0, y:0)
 
             Spacer()
-            NavigationLink {
-                presentetionMode.wrappedValue.dismiss()
+            Button {
+                mode.wrappedValue.dismiss()
             } label: {
                 HStack{
                     Text("Already have an account ? ")
