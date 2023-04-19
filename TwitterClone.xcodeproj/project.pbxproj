@@ -29,6 +29,7 @@
 		6C49F28D29ED7B3D00E36A73 /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C49F28C29ED7B3D00E36A73 /* TweetFilterViewModel.swift */; };
 		6C6A2B3429F0264B00EFAA80 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6A2B3329F0264B00EFAA80 /* LoginView.swift */; };
 		6C6A2B3629F0292D00EFAA80 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6A2B3529F0292D00EFAA80 /* RoundedShape.swift */; };
+		6C6A2B3829F0454100EFAA80 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6A2B3729F0454100EFAA80 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		6C49F28C29ED7B3D00E36A73 /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
 		6C6A2B3329F0264B00EFAA80 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6C6A2B3529F0292D00EFAA80 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
+		6C6A2B3729F0454100EFAA80 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				6C6A2B3329F0264B00EFAA80 /* LoginView.swift */,
+				6C6A2B3729F0454100EFAA80 /* RegisterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				6C49F28329ED6B9A00E36A73 /* MessagesView.swift in Sources */,
 				6C49F28529ED6BAE00E36A73 /* ExploreView.swift in Sources */,
 				6C49F28729ED6BC200E36A73 /* ProfileView.swift in Sources */,
+				6C6A2B3829F0454100EFAA80 /* RegisterView.swift in Sources */,
 				6C025BF829EEA466005B88E2 /* SideMenuRowView.swift in Sources */,
 				6C49F25B29ED5DCC00E36A73 /* ContentView.swift in Sources */,
 				6C49F27529ED607A00E36A73 /* TweetsRowView.swift in Sources */,
