@@ -40,6 +40,7 @@
 		6C6A2B4A29F0504300EFAA80 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6A2B4929F0504300EFAA80 /* AuthViewModel.swift */; };
 		6C95FC0629F14CE50036EA81 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C95FC0529F14CE50036EA81 /* ProfilePhotoSelectorView.swift */; };
 		6C95FC0929F153A50036EA81 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C95FC0829F153A50036EA81 /* ImagePicker.swift */; };
+		6C95FC0C29F1618C0036EA81 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C95FC0B29F1618C0036EA81 /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		6C6A2B4929F0504300EFAA80 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		6C95FC0529F14CE50036EA81 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
 		6C95FC0829F153A50036EA81 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		6C95FC0B29F1618C0036EA81 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,9 +185,9 @@
 		6C49F25729ED5DCB00E36A73 /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				6C49F26829ED5E4800E36A73 /* Service */,
 				6C95FC0729F153990036EA81 /* Utils */,
 				6C49F26929ED5E4E00E36A73 /* Core */,
-				6C49F26829ED5E4800E36A73 /* Service */,
 				6C49F26729ED5E3F00E36A73 /* Model */,
 				6C49F26629ED5E3800E36A73 /* Extension */,
 				6C49F25829ED5DCC00E36A73 /* TwitterCloneApp.swift */,
@@ -223,6 +225,7 @@
 		6C49F26829ED5E4800E36A73 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				6C95FC0B29F1618C0036EA81 /* ImageUploader.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				6C6A2B3629F0292D00EFAA80 /* RoundedShape.swift in Sources */,
 				6C025BF129EEA0A0005B88E2 /* UserRowView.swift in Sources */,
 				6C6A2B4A29F0504300EFAA80 /* AuthViewModel.swift in Sources */,
+				6C95FC0C29F1618C0036EA81 /* ImageUploader.swift in Sources */,
 				6C6A2B3429F0264B00EFAA80 /* LoginView.swift in Sources */,
 				6C025BFA29EEA47D005B88E2 /* SideMenuViewModel.swift in Sources */,
 				6C49F28129ED6B8800E36A73 /* NotificationsView.swift in Sources */,

@@ -11,6 +11,7 @@ struct ProfilePhotoSelectorView: View {
     @State private var showImagePicker = false
     @State private var selectedImage:UIImage?
     @State private var profileImage: Image?
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         VStack{
             AuthenticationHeader(title1: "Setup account", title2: "Add a profile photo")
@@ -29,8 +30,28 @@ struct ProfilePhotoSelectorView: View {
                 }
             }.sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
                 ImagePicker(selectedImage: $selectedImage)
-            }            .padding(.top,44)
+            }
+            
+            .padding(.top,44)
+            if let selectedImage = selectedImage{
+                VStack {
+                    Spacer()
+                    Button {
+                        viewModel.uploadProfileImage(selectedImage)
+                    } label: {
+                        Text("Continue")
+                            .font(.headline)
+                            .frame(width:340, height: 50)
+                            .background(.blue)
+                            .clipShape(Capsule())
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                .shadow(color: .gray.opacity(0.5),radius: 10, x:0, y:0)
+                .padding(.bottom)
+                }
 
+        }
             Spacer()
         }//VStack
         .ignoresSafeArea()
