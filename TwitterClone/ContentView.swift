@@ -13,13 +13,7 @@ struct ContentView: View {
     var body: some View {
         Group{
             // noT user logged in
-            if viewModel.userSession == nil {
-                LoginView()
-            }else {
-                // user logged in
-                mainInterfaceView
-                
-            }
+         LoginView()
         }//: Group
     }
 }
