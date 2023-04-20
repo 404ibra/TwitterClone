@@ -15,7 +15,15 @@ class AuthViewModel: ObservableObject {
     }
     
     func login(withEmail email: String, password: String){
-        print("login")
+        Auth.auth().signIn(withEmail: email, password: password){result, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            guard let user = result?.user else {return}
+            self.userSession = user
+            print("user logged in")
+        }
     }
     
     
@@ -39,5 +47,13 @@ class AuthViewModel: ObservableObject {
             }
             
         }
+    }
+    
+    func signOut(){
+        //sets user session to nil  so we show login screen
+        userSession = nil
+        
+        //signs user out on servers
+        try? Auth.auth().signOut()
     }
 }
