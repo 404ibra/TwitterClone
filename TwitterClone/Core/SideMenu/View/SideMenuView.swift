@@ -5,49 +5,56 @@
 //  Created by İbrahim Aktaş on 18.04.2023.
 //
 import SwiftUI
+import Kingfisher
 
 struct SideMenuView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     var body: some View {
-        VStack(alignment: .leading, spacing: 32){
-            VStack(alignment: .leading){
-                Circle()
-                    .frame(height: 48)
-                
+        if let user = authViewModel.currentUser  {
+            VStack(alignment: .leading, spacing: 32){
                 VStack(alignment: .leading){
-                    Text("İbrahim")
-                        .font(.headline)
-                    Text("@ibra")
-                        .font(.caption)
-                        .foregroundColor(.gray)
-                }
-                UserStatsView()
-            }//VStack
-            .padding(.horizontal)
-            ForEach(SideMenuViewModel.allCases, id:\.rawValue){viewModel in
-                if viewModel == .profile {
-                    NavigationLink {
-                        ProfileView()
-                    } label: {
+                    KFImage(URL(string: user.profileImageUrl))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 48)
+                        .clipShape(Circle())
+                    
+                    VStack(alignment: .leading){
+                        Text(user.fullname)
+                            .font(.headline)
+                        Text("@\(user.username)")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
+                    UserStatsView()
+                }//VStack
+                .padding(.horizontal)
+                ForEach(SideMenuViewModel.allCases, id:\.rawValue){viewModel in
+                    if viewModel == .profile {
+                        NavigationLink {
+                            ProfileView(user: user)
+                        } label: {
+                            SideMenuRowView(viewModel: viewModel )
+                        }
+
+                    }else if viewModel == .logout {
+                        Button {
+                            authViewModel.signOut()
+                        } label: {
+                            SideMenuRowView(viewModel: viewModel)
+                        }
+
+                        
+                    }else{
                         SideMenuRowView(viewModel: viewModel )
                     }
-
-                }else if viewModel == .logout {
-                    Button {
-                        authViewModel.signOut()
-                    } label: {
-                        SideMenuRowView(viewModel: viewModel)
-                    }
-
                     
-                }else{
-                    SideMenuRowView(viewModel: viewModel )
-                }
-                
-                
-              
-            }//BIG VSTACK
-            Spacer()
+                    
+                  
+                }//BIG VSTACK
+                Spacer()
+            }
+
         }
     }
 }
