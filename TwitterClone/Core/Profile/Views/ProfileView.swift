@@ -34,6 +34,9 @@ struct ProfileView: View {
             }
             Spacer()
         }//: Big VStack
+        .navigationBarHidden(true)
+       
+        
     }
 }
 
