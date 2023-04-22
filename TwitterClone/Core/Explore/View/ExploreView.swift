@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ExploreView: View {
     @ObservedObject var viewModel = ExploreViewModel()
+    @State private var searchText = ""
     var body: some View {
-        NavigationView{
+     
             VStack{
+                SearchBar(text: $searchText)
+                    .padding()
                 ScrollView{
                     LazyVStack{
                         ForEach(viewModel.users){ user in
@@ -27,7 +30,7 @@ struct ExploreView: View {
             }// VStack
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)
-        }//: NavigationView
+     
         
     }
 }
